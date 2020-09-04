@@ -1,0 +1,55 @@
+1.) reverse the bits of an 32 bit unsigned integer n
+
+n is given whose bits have to reversed
+algorithm-  
+result =0,
+for(i=0; i<32; i++){
+   result <<= 1   //left shifting
+   if(n & 1 >0){
+       result++
+   n >>= 1
+return result
+
+
+2.)single no
+   given an array of integers A, every element appears twice except for one element. Find that single one.
+
+algorithm-
+input the elements of an array
+sort an array 
+iterate the loop 
+take the xor of two consecutive elements of sorted array
+if xor>0 (means if xor of two elements is not 0 then it means elements are not same) then print that A[i]
+break the loop 
+
+
+3.)You are given an array of integers. The special property of the array is that exactly two different elements occur once while other elements occur twice.
+   You are required to determine those two elements.
+
+algorithm-
+input the elements of an array
+sort an array 
+iterate the loop(use while loop and set condition i<n)
+take the xor of two consecutive elements
+if xor is not equal to 0 then print A[i] and increment the i by 1
+else increment i by 2
+
+
+4.)given a positive integer A, the task is to count the total no of set bits in the binary representation of all the nos from 1 to A. return the count modulo 10^9+7
+
+FIRST, we need to know how to find set bit( bit==1) in an integer
+algorithm-
+first take a variable count and set count =0
+then iterate till the integer A is not equal to 0(while(A != 0)
+then take A & 1 and add count  (count += A & 1)
+then A >>= 1
+return count
+SECOND, for all the nos from 1 to A
+algorithm-
+iterate from 1 to A
+Procede as above
+then add count each time to get the total
+
+
+5.)given two integers A and B, find a no X such that A xor X is minimum possible, and the no of set bits in X equals B.
+
